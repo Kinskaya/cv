@@ -311,7 +311,7 @@ a:hover {
 }
 
 .footer__item:first-child {
-    background: url('./assets/icons/github.svg') left center no-repeat;
+    background: url('assets/icons/github.svg') left center no-repeat;
     width: 120px;
     padding-left: 45px;
     background-size: 35px;
