@@ -1,0 +1,425 @@
+:root {
+    --border-color: #919b2f;
+    --link_color: #447e83;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style:none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+footer {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+address {
+    font-style: inherit;
+}
+
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    font-family: 'Noto Serif', serif;
+    color: #3f3737;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+a {
+    color: var(--link_color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.greeting {
+    padding: 2rem 0 0 0;
+}
+
+.greeting__row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4rem;
+}
+
+.greeting__body {
+    flex: 1;
+    padding-left: 3rem;
+    text-align: center;
+}
+
+.greeting__position {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+}
+
+.greeting__name {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    font-size: 1.5em;
+    padding-bottom: 0.6rem;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.extra-info {
+    margin: 0 auto;
+    padding: 1rem 0 0 2rem;
+}
+
+.extra-info__row {
+   display: flex;
+    flex-direction: column;
+}
+
+.body:after,
+.education__row:after {
+    content: '';
+    background-color: var(--border-color);
+    height: 2px;
+    display: block;
+    margin: 1rem 0;
+    animation: background 3s infinite alternate;
+}
+
+@keyframes background {
+    50% {
+        background: skyblue;
+        box-shadow: 0 -20px 10px -10px yellowgreen inset;
+    }
+}
+
+.greeting__photo {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+.my-photo {
+    width: auto;
+    height: 100%;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 0.8rem 0;
+}
+
+.contacts__list li {
+    margin: 0 0 10px 0;
+}
+
+.contacts__list li:first-line {
+    font-weight: bold;
+}
+
+.contacts__list li:last-child:first-line {
+    font-weight: inherit;
+}
+
+.contacts__body {
+    padding-top: 2rem;
+}
+
+.skills__list li,
+.languages__list li {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.hobbies__list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hobbies__list i {
+    font-size: 2rem;
+    color: var(--border-color);
+}
+
+.hobbies__list i:hover {
+    color: inherit;
+    cursor: pointer;
+}
+
+.hobbies__list li {
+    margin-right: 0.6rem;
+}
+
+.slider__body {
+    width: 14rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.slider__body  {
+    text-align: center;
+}
+
+.slider__items {
+    margin-bottom: 0.5rem;
+}
+
+.slider__title {
+    text-align: initial;
+}
+
+.slider__item.slider__item_active {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__items img {
+    display: none;
+}
+
+.slider__btn_next,
+.slider__btn_prev {
+    cursor: pointer;
+    width: auto;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: var(--link_color);
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.slider__btn_next:hover,
+.slider__btn_prev:hover {
+    background-color: rgb(195, 209, 221);
+}
+
+.main-info {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 2rem 0 1rem;
+}
+
+.about-me {
+    padding: 2rem 0 1rem 0;
+}
+
+.about-me__row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-me__header {
+    flex: 1 1 auto;
+    margin: 0 0 120px 0;
+}
+
+.about-me__description {
+    text-align: justify;
+    margin: 15px 0 0 0;
+}
+
+.education {
+    padding: 0 0 2rem 0;
+}
+.education__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.education__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.education__item {
+  margin: 0 0 2rem 0;
+}
+
+.education__item:last-child {
+    margin-bottom: 0;
+}
+
+.item__row {
+    display: flex;
+}
+
+.item__left-body {
+    flex: 0 0 35%;
+    padding: 0 0.5rem 0 0 ;
+}
+.item__date,
+.item__course {
+    padding: 0 0 0.8rem 0;
+}
+
+.item__course,
+.item__name {
+    font-weight: bold;
+}
+
+.item__description {
+    text-align: justify;
+}
+
+.footer .container {
+    background-color: yellow;
+}
+
+.footer__item:first-child {
+    background: url('./assets/icons/github.svg') left center no-repeat;
+    width: 120px;
+    padding-left: 45px;
+    background-size: 35px;
+    line-height: 45px;
+}
+
+.footer__item:hover {
+    cursor: pointer;
+}
+
+.footer__row {
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .education {
+        padding-bottom: 0;
+    }
+
+    .extra-info {
+        padding: 1rem 2rem 1rem 2rem;;
+    }
+
+    .greeting__body {
+        padding-left: 0;
+    }
+
+    .extra-info__row {
+        flex-direction: initial;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contacts__body {
+        padding-top: 0;
+    }
+
+    .body {
+        padding-right: 0.6rem;
+    }
+
+    .extra-info__hobbies {
+        flex-grow: 0.2;
+    }
+
+    .contacts__list li {
+        margin: 0 0 5px 0;
+    }
+
+    .skills__list {
+        padding-bottom: 2px;
+    }
+
+    .main-info {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .greeting__row {
+        display: initial;
+        padding-left: 1rem;
+    }
+
+    .greeting__photo {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .greeting__body {
+        padding-left: 0;
+    }
+
+    .greeting__name {
+        font-size: 1.3rem;
+        padding-top: 0.6rem;
+    }
+
+    .greeting__position {
+        font-size: 1rem;
+    }
+
+    .item__row {
+        display: initial;
+    }
+
+    .item__left-body {
+        padding-bottom: 0.8rem;
+    }
+
+    .education__item {
+        border-bottom-color: var(--border-color);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .education__item:last-child {
+        border-bottom: none;
+    }
+
+}
